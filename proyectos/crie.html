@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Proyecto-Sistema Web CRIE</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">  
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script src="https://kit.fontawesome.com/76891679ca.js" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-7.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Alejandro Olea Locia</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/perfil.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Hola, mi nombre es Alejandro Olea Locia, soy ingeniero en Informatica y desarrollador.<br><a href="about.html">Descubre mas sobre en mi</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+					    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../cv.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Ver CV</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>Acerca de mi</a>
+					</li>
+				</ul>
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Control de Expedientes del CRIE</h2>
+				    <div class="meta mb-3"><span class="date">2017</span><span class="time">PHP</span><span class="comment">MySQL</span><span class="comment">HTML</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <img class="img-fluid" src="../assets/images/proyectos/login-crie.jpg" alt="image">
+						<figcaption class="mt-2 text-center image-caption">Login pagina CRIE</figcaption>
+						</figure>
+				    
+				    <h3 class="mt-5 mb-3">Desarrrollo</h3>
+				    <p>En el CRIE (Centro de Recursos e Información para la Integración Educativa), se ofrece orientación y apoyo a padres de familia y 
+						maestros para contribuir a la eliminación de barreras para el aprendizaje en el ámbito educativo, social y laboral. Por lo antes mencionado, maneja 
+						diversos tipos de expedientes físicos y documentos digitales como son archivos, fotografías y demás.  Atiende a maestros y padres de familia en el 
+						Centro de Integración, así como en Instituciones educativas. Por lo que se llevó a cabo el desarrollo de un sistema web para el control de sus
+						expedientes.</p>
+					
+					<h5 class="my-3">Resultados:</h5>
+				    <ul class="mb-5">
+					  <li class="mb-2">Tener un mejor control de sus expedientes.</li>
+					  <li class="mb-2">El acceso a sus expedientes es mucho más rápido y eficiente.</li>
+					  <li class="mb-2">El llenado de las solicitudes se realiza de una manera mucho más rápida y eficiente.</li>
+					</ul>
+
+				    <h3 class="mt-5 mb-3">Marco de Trabajo</h3>
+				    <p>Se muestran a continuación algunas de las tecnologías usadas en el desarrollo del proyecto.</p>
+				    <h5 class="my-3">Tecnologías Usadas:</h5>
+				    <ul class="mb-5">
+					  <li class="mb-2"><span>PHP: </span><p>Se utilizó PHP como lenguaje de servidor, para atender las consultas de parte del cliente.</p>						
+						
+					  <li class="mb-2">MySQL: <p>Como gestor de Base de datos.</p>
+					  
+					  <li class="mb-2">HTML: <p>Como principal tecnología para la maquetación de las paginas.</p>
+					  
+					  <li class="mb-2">Boostrap: <p>Para obtener un diseño responsive con las clases que este framework ofrece.</p>
+					  
+					  <li class="mb-2">Javascript: <p>Para dar mayor funcionalidad al sistema</p>
+					  
+					  <li class="mb-2">Otras: <p>Se utilizaron otras tecnologías como son JQuery, Ajax, y librerías como: PhpMailer, fpdf etc. </p>
+												
+						<h3 class="mt-5 mb-3">Ejemplo de Código</h3>
+						<p>En la siguiente imagen se puede observar un fragmento de código, en este se observa etiquetas html en conjunto con las clases de Boostrap, también 
+							se observa la incrustación de código php, en este caso para mostrar los datos del usuario que ya fueron guardados en la base de datos, mediante un
+							script se recuperan y se muestran, así el personal que maneja el sistema podrá actualizar los datos en caso de ser necesario. </p>
+
+					<img class="img-fluid" src="../assets/images/proyectos/crie-ejemplo-codigo.jpg" alt="image">
+		    
+				    <h3 class="mt-5 mb-3">Imagenes de muestra</h3>
+				    <p>En el siguiente slider se muestran algunas imágenes acerca del funcionamiento de la aplicación. </p>
+
+				    <div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								
+								<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+									<ol class="carousel-indicators">
+										<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+										  <img src="../assets/images/proyectos/login-crie.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Login</h5>
+											<span>Página de inicio para el personal.</span>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/nuevo-solicitud-crie.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Nueva Solicitud</h5>
+											<p>Formulario de registro de una nueva solicitud.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/listado-solictud-crie.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Listado de Solicitudes</h5>
+											<p>Listado de las solicitudes ingresadas.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/modificar-solicitud-crie.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Modificar Solicitud</h5>
+											<p>Formulario para modificar datos de la solicitud.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/solicitud-pdf-crie.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Solicitud en Pdf</h5>
+											<p>Se muestra la solicitud con los datos en pdf.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/opciones-crie.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Tipo de solicitud</h5>
+											<p>Ventana con las 3 opciones de solicitud.</p>
+										  </div>
+										</div>
+									  </div>
+									  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Anterior</span>
+									  </a>
+									  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Siguiente</span>
+									  </a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="secretaria.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="sistema-solar.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+
+	    
+	    <footer class="footer text-center py-3 theme-bg-dark">
+		   
+	         <small class="copyright">Desarrollador <i class="fas fa-laptop-code"></i> Ing. Alejandro Olea Locia</small>
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="../assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+

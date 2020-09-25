@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Control de Pacientes</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">  
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script src="https://kit.fontawesome.com/76891679ca.js" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-7.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="../index.html">Alejandro Olea Locia</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/perfil.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Hola, mi nombre es Alejandro Olea Locia, soy ingeniero en Informatica y desarrollador.<br><a href="../about.html">Descubre mas sobre en mi</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+					    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../cv.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Ver CV</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>Acerca de mi</a>
+					</li>
+				</ul>
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Control de Pacientes</h2>
+				    <div class="meta mb-3"><span class="date">2020</span><span class="time">Java</span><span class="comment">JSPs</span></span><span class="comment">Servlets</span><span class="comment">MySQL</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <img class="img-fluid" src="../assets/images/proyectos/pacientes-inicio.jpg" alt="image">
+						<figcaption class="mt-2 text-center image-caption">Pagina de control de Pacientes</figcaption>
+						</figure>
+				    
+				    <h3 class="mt-5 mb-3">Desarrollo</h3>
+				    <p>Para poner en práctica lo aprendido sobre la parte empresarial de Java, en el cual incluye Servlets y JSPs, se aprovechó la necesidad de llevar el control 
+					de pacientes de un consultorio dental, los requisitos eran mínimos, por lo cual quedó perfecto para desarrollar lo aprendido, como se observa el proyecto consiste 
+					solamente en agregar pacientes a una base de datos, modificar y eliminar en caso de ser necesario, funciones básicas de un CRUD. La aplicación aplica el patrón de 
+					diseño MVC(Modelo Vista Controlador), como vista tenemos al JSP, el cual hace una petición al servidor, que es procesada por el controlador que este caso es un Servlet, 
+					este procesa la petición y la manda al modelo que en esta caso es un JavaBeans, el cual accede a la base de datos para el cual se utilizó MySQL.</p>
+
+				    <h3 class="mt-5 mb-3">Marco de Trabajo</h3>
+				    <p>Se muestran a continuación algunas de las tecnologías usadas en el desarrollo del proyecto.</p>
+				    <h5 class="my-3">Tecnologías Usadas::</h5>
+				    <ul class="mb-5">
+					<li class="mb-2"><span>Java: Como parte del Backed se utilizó su versión empresarial, como se mencionó anteriormente, se utilizaron las tecnologías de los JSPs y Servlets..</span></li>	
+					 <li class="mb-2"><span>MySQL: Como gestor de Base de Datos.</span></li>				
+					 <li class="mb-2"><span>HTML: </span></li>	
+					 <li class="mb-2"><span>Javascript: </span></li>
+					 <li class="mb-2"><span>Boostrap: </span></li>				
+					 <li class="mb-2"><span>FontAwesome: </span></li>	
+						
+						<h3 class="mt-5 mb-3">Ejemplo de Código</h3>
+						<p>En el siguiente se puede observar el código del servlet controlador, este recibía las peticiones por parte de la vista, procesa la petición y la manda a la clase de modelo, 
+							una vez recibido los datos el servlet responde con la vista que en este caso es un JSP. </p>
+
+					<img class="img-fluid" src="../assets/images/proyectos/pacientes-servlet.jpg" alt="image">
+					<figcaption class="mt-2 text-center image-caption">Servlet Controlador</figcaption>
+					
+					<h3 class="mt-5 mb-3">Imagenes de muestra</h3>
+				    <p>En el siguiente slider se muestran algunas imágenes acerca del funcionamiento de la aplicación. </p>
+		    
+				    <div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								
+								<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+									<ol class="carousel-indicators">
+										<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+										  <img src="../assets/images/proyectos/pacientes-inicio.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Control de pacientes</h5>
+											<span>Pagina para el control de pacientes.</span>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/pacientes-agregar.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Agregar Paciente</h5>
+											<p>Modal con formulario para agregar paciente.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/pacientes-lista.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Listado de Pacientes</h5>
+											<p>Listado de pacientes así como total y pacientes con cita del dia.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/pacientes-modificar.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Modificar paciente</h5>
+											<p>Formulario para modificar datos del Paciente.</p>
+										  </div>
+										</div>
+									  </div>
+									  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Anterior</span>
+									  </a>
+									  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Siguiente</span>
+									  </a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="mochitlecos.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+
+	    
+	    <footer class="footer text-center py-3 theme-bg-dark">
+		   
+	         <small class="copyright">Desarrollador <i class="fas fa-laptop-code"></i> Ing. Alejandro Olea Locia</small>
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="../assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+

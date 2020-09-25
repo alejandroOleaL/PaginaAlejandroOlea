@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Sistema Solar en Realidad Aumentada</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">  
+    <link rel="shortcut icon" href="favicon.ico"> 
+	
+	    <!-- FontAwesome JS-->
+	<script src="https://kit.fontawesome.com/76891679ca.js" crossorigin="anonymous"></script>
+	
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-7.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="../index.html">Alejandro Olea Locia</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/perfil.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Hola, mi nombre es Alejandro Olea Locia, soy ingeniero en Informatica y desarrollador.<br><a href="../about.html">Descubre mas sobre en mi</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+					    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../cv.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Ver CV</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>Acerca de mi</a>
+					</li>
+				</ul>
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Sistema Solar con Realidad Aumentada</h2>
+				    <div class="meta mb-3"><span class="date">2017</span><span class="time">Unity</span><span class="comment">C#</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <img class="img-fluid" src="../assets/images/proyectos/zombie-portada.jpg" alt="image">
+						</figure>
+				    
+				    <h3 class="mt-5 mb-3">Desarrrollo</h3>
+				    <p>Primeramente, comencé con la creación de los 8 planetas, para construir cada uno busque sus respectivas texturas en internet, Una vez obtenidas las 
+						texturas cree 8 esferas y una para el sol, en cada una de estas le asigne la textura que le corresponde a cada planeta teniendo en cuenta el tamaño de 
+						cada uno, por ejemplo, el sol es el planeta más grande y mucho mayor que todos los demás planetas juntos, respecto a los planetas Júpiter es el más grande 
+						me apoye de una tabla que muestra los tamaños de los planetas, también los coloque. </p>
+
+				    <h3 class="mt-5 mb-3">Marco de Trabajo</h3>
+				    <p>Se muestran a continuación algunas de las tecnologías usadas en el desarrollo del proyecto.</p>
+				    <h5 class="my-3">Tecnologías Usadas:</h5>
+				    <ul class="mb-5">
+					  <li class="mb-2"><span>Unity: </span><p>En Unity para el modelado de los planetas, el sol y el cinturon de asteroides entre las orbitas de Marte y Jupiter, en 3d.</p>
+						<img class="img-fluid" src="../assets/images/proyectos/monoSistemaSolar.jpg" alt="image"></li>
+						
+					  <li class="mb-2">MonoDeveloper: <p>MonoDevelop es un entorno de desarrollo integrado libre y gratuito, Los scripts que se utilizaron para el comportamiento 
+						de los objetos se escribieron en el lenguaje C#, utilizando la herramienta que Unity trae predeterminada Monodevelop, usando el lenguaje C#.</p>
+						<img class="img-fluid" src="../assets/images/proyectos/unitySistemaSolar.jpg" alt="image"></li>
+						
+					<li class="mb-2">Vufuria: <p>Para realizarlo en realidad aumentada utilice Vufuria registrándose a la página y realizando una serie de pasos que omito 
+							para no hacer más largo esta descripción ya teniendo instalado el paquete en Unity, utilice dos prefabs que vienen al descargar el paquete de Vufuria la
+							ARcamara y ImageTarget.#</p>
+						<img class="img-fluid" src="../assets/images/proyectos/vufuria.png" alt="image"></li>
+						
+						<h3 class="mt-5 mb-3">Ejemplo de Código</h3>
+						<p>Para la rotación de los planetas se desarrolló el siguiente script. De este como se puede observar primero inicie una variable de tipo Vector 3 llamada
+							rotación, con esta variable lo que consigo es cuánto debe de rotar en los vectores X, Y y Z. </p>
+				    <pre>
+					    <code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+							
+ public class RotacionT : MonoBehavier {
+ 
+  public Vector3 rotacion = new Vector3(0, 45, 0);
+ 
+  void start(){}
+								
+   void Update() {
+    transform.Rotate (Rotacion * Time.deltaTime);
+}	
+					    </code>
+					</pre>
+		    
+				    <h3 class="mt-5 mb-3">Video de Ejemplo</h3>
+				    <p>En el siguiente video se muestra un ejemplo de la aplicación en funcionamiento. </p>
+
+				    <div class="embed-responsive embed-responsive-16by9">
+					   <iframe width="560" height="315" src="https://www.youtube.com/embed/hnCmSXCZEpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+					</div>
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="crie.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="zombie-runner.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+
+	    
+	    <footer class="footer text-center py-3 theme-bg-dark">
+		   
+	         <small class="copyright">Desarrollador <i class="fas fa-laptop-code"></i> Ing. Alejandro Olea Locia</small>
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="..

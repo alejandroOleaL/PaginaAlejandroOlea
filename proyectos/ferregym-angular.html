@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>FerreGym con Angular</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">  
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script src="https://kit.fontawesome.com/76891679ca.js" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-7.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="../index.html">Alejandro Olea Locia</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/perfil.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Hola, mi nombre es Alejandro Olea Locia, soy ingeniero en Informatica y desarrollador.<br><a href="../about.html">Descubre mas sobre en mi</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+					    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../cv.html" target="_blank"><i class="fas fa-file-alt fa-fw mr-2"></i>Ver CV</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>Acerca de mi</a>
+					</li>
+				</ul>
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">FerreGym con Angular</h2>
+				    <div class="meta mb-3"><span class="date">2021</span><span class="time">Java</span><span class="comment">SpringBoot</span></span><span class="comment">Angular</span><span class="comment">MySQL</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <img class="img-fluid" src="../assets/images/proyectos/angular-ferregym-lista.jpg" alt="pagina de listado de productos">
+						<figcaption class="mt-2 text-center image-caption">Aplicación web FerreGym con SpringBoot como Backend y Angular como Frontend</figcaption>
+						</figure>
+						
+				    <h2 class="mt-5 mb-3">Desarrollo</h2>
+				    <p>Para esta ocasión se modificó el proyecto de FerreGym para adaptarlo a otras tecnologías, se trabajó en dos partes separadas la parte del Backend qué es Spring y la parte del 
+						Frontend con Angular, estas dos partes se comunican a través de una Api Rest.
+					</p>
+					
+					<h3 class="mt-5 mb-3">Frontend Con Angular</h3>
+					
+					<h4 class="title mb-3"><a href="https://github.com/alejandroOleaL/ferregymAngularFrontend.git" target="_blank">Link al repositorio en GitHub  <i class="fab fa-github"></i></a></h4>
+					
+				    <p>Angular es un framework para aplicaciones web desarrollado en TypeScript, se utiliza para el desarrollo y mantenimiento de aplicaciones web de una sola página conocidas como 
+						Single-page application, con este framework creamos un crud básico para la administración de la información de los clientes de la empresa.
+					</p>	
+						
+						<h3 class="mt-5 mb-3">Ejemplo de Código</h3>
+						<p>En el siguiente ejemplo se puede observar a la clase de servicio, en esta se tiene las operaciones basicas de un CRUD como son crear, editar, eliminar un cliente.</p>
+						<pre>
+create(cliente: Cliente) : Observable<any> {
+	return this.http.post<any>(this.urlEndPoint, cliente, {headers: this.httpHeaders}).pipe(
+	  catchError(e =>{
+
+	if(e.status==400){
+	  return throwError(e);
+	}
+
+	Swal.fire('Error al crear el cliente', e.error.mensaje, 'error');
+		return throwError(e);
+		})
+	);
+  }
+
+getCliente(id): Observable<Cliente>{
+	return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`).pipe(
+	  catchError(e => {
+		this.router.navigate(['/clientes']);
+		 Swal.fire('Error al editar', e.error.mensaje, 'error');
+			return throwError(e);
+		  })
+	);
+  }
+					</pre>
+					
+					<h3 class="mt-5 mb-3">Backend con Spring</h3>
+					
+					<h4 class="title mb-3"><a href="https://github.com/alejandroOleaL/ferregymAngularFrontend.git" target="_blank">Link al repositorio en GitHub  <i class="fab fa-github"></i></a></h4>
+					
+				    <p>
+						Al igual con el proyecto anterior, para la parte del Backend se usó Spring pero en esta ocasión para conectar con Angular, se utilizó la tecnología de Rest,
+						así que se creó en vez de un controlador normal, se utilizó un RestController tecnología de Spring para crear web Services pero con REST. 
+					</p>	
+						
+						<h3 class="mt-5 mb-3">Ejemplo de Código</h3>
+						<p>En la siguiente imagen se puede observar el código correspondiente al controlador de la entidad de Cliente, pero esta vez utilizando la tecnología de REST. </p>
+
+					<img class="img-fluid" src="../assets/images/proyectos/angular-ferregym-restcontroller.jpg" alt="Codigo Ejemplo FerreGym con Angular">
+					<figcaption class="mt-2 text-center image-caption">RestController Clientes</figcaption>
+					
+					<h3 class="mt-5 mb-3">Imagenes de muestra</h3>
+				    <p>En el siguiente slider se muestran algunas imágenes acerca del funcionamiento de la aplicación. </p>
+		    
+				    <div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								
+								<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+									<ol class="carousel-indicators">
+										<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+										<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+										  <img src="../assets/images/proyectos/angular-ferregym-lista.jpg" class="d-block w-100" alt="login">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Lista de Clientes</h5>
+											<p>CRUD con Angular y Spring.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/angular-ferregym-form.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Formulario</h5>
+											<p>Formulario para crear un cliente.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/angular-ferregym-editar.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Editar</h5>
+											<p>Formulario para editar.</p>
+										  </div>
+										</div>
+										<div class="carousel-item">
+										  <img src="../assets/images/proyectos/angular-ferregym-sweetalert.jpg" class="d-block w-100" alt="...">
+										  <div class="carousel-caption d-none d-md-block">
+											<h5>Sweet Alert2</h5>
+											<p>Mensajes de alerta.</p>
+										  </div>
+										</div>
+									  </div>
+									  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Anterior</span>
+									  </a>
+									  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Siguiente</span>
+									  </a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				<a class="nav-link-next nav-item nav-link rounded-right" href="leonesGym.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+
+	    
+	    <footer class="footer text-center py-3 theme-bg-dark">
+		   
+	         <small class="copyright">Desarrollador <i class="fas fa-laptop-code"></i> Ing. Alejandro Olea Locia</small>
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="../assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+
